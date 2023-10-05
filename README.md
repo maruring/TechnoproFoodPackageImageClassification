@@ -1,0 +1,2 @@
+# TechnoproFoodPackageImageClassification
+Signate主催の食品パッケージの画像分類(一般向け)のコード
