@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jupyter:
+    build:
+      context: .
+    tty: true
+    container_name: annotation-container
+    volumes:
+      - ./codes:/root/src/codes/
+      - ./Dataset:/root/src/Dataset/
+      - ./data:/root/src/data/
+      - ./Models:/root/src/Models/
+      - ./output:/root/src/output/
+    ports: 
+      - "8888:8888"
+    command: jupyter-lab --ip 0.0.0.0 --allow-root -b localhost --NotebookApp.token=''
